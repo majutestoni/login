@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css">
+    <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
-
-
 </head>
 
 <body class="body">
-    <script defer type="text/javascript" src="teste.js"></script>
     <div class="container">
-        <div class="card">
-            <h1>ENTRAR</h1>
+        <div class="card-cadastro">
+            <h1>CADASTRAR</h1>
+
+            <div class="label-float">
+                <input type="text" id="Nome" paceholder="" required>
+                <label for="Nome">Nome</label>
+            </div>
 
             <div class="label-float">
                 <input type="text" id="usuario" paceholder="" required>
@@ -24,24 +25,22 @@
             </div>
 
             <div class="label-float">
-
                 <input type="password" id="senha" paceholder="" required>
                 <label for="senha">senha</label>
-                <i id="eye" class="fa-solid fa-eye"></i>
+            </div>
 
+            <div class="label-float">
+                <input type="password" id="senha" paceholder="" required>
+                <label for="confirmarSenha">Confirmar senha</label>
             </div>
 
             <div class="justify-center">
-                <button>Entrar</button>
+                <button>Cadastrar</button>
             </div>
 
-            <div class="justify-center">
-                <hr>
-            </div>
 
-            <p>Não tem uma conta?
-                <a href="cadastro.html">Cadastre-se</a>
-            </p>
+
+
 
         </div>
 
