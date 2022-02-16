@@ -10,46 +10,46 @@
 </head>
 
 <body class="body">
-    <script defer src="script.js"></script>
-    <div class="container">
-        <div class="card-cadastro">
-            <h1>CADASTRAR</h1>
-            <script defer src="script2.js"></script>
+    <form action="">
+        <div class="container">
+            <div class="card-cadastro">
+                <h1>CADASTRAR</h1>
+                <script defer src="script2.js"></script>
 
-            <div class="label-float">
-                <input type="text" id="nome" paceholder="" required>
-                <label id="labelNome" for="nome">Nome</label>
+                <div class="label-float">
+                    <input type="text" id="nome" paceholder="" required>
+                    <label id="labelNome" for="nome">Nome</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" id="usuario" paceholder="" required>
+                    <label id="labelUsuario" for="usuario">usuario</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="password" id="senha" paceholder="" required>
+                    <label id="labelSenha" for="senha">senha</label>
+                    <i onclick="eyeClick()" id="eye" class="fa-solid fa-eye"></i>
+                </div>
+
+                <div class="label-float">
+                    <input type="password" id="confirmarSenha" paceholder="" required>
+                    <label id="labelConfirmar" for="confirmarSenha">Confirmar senha</label>
+                    <i onclick="eyeClick()" id="eye" class="fa-solid fa-eye"></i>
+                </div>
+
+                <div class="justify-center">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+
+
+
+
+
             </div>
-
-            <div class="label-float">
-                <input type="text" id="usuario" paceholder="" required>
-                <label id="labelUsuario" for="usuario">usuario</label>
-            </div>
-
-            <div class="label-float">
-                <input type="password" id="senha" paceholder="" required>
-                <label id="labelSenha" for="senha">senha</label>
-                <i onclick="eyeClick()" id="eye" class="fa-solid fa-eye"></i>
-            </div>
-
-            <div class="label-float">
-                <input type="password" id="confirmarSenha" paceholder="" required>
-                <label id="labelConfirmar" for="confirmarSenha">Confirmar senha</label>
-                <i onclick="eyeClick()" id="eye" class="fa-solid fa-eye"></i>
-            </div>
-
-            <div class="justify-center">
-                <button onclick="cadastrar()">Cadastrar</button>
-            </div>
-
-
-
-
 
         </div>
-
-    </div>
-
+    </form>
 </body>
 
 </html>

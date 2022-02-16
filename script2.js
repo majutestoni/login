@@ -11,7 +11,7 @@ let confirmarSenha = document.querySelector('#confirmarSenha');
 let labelConfirmar = document.querySelector('#labelConfirmar');
 
 nome.addEventListener('keyup', () => {
-    if (nome.Value.length <= 2) {
+    if (nome.ariaValueMax <= 2) {
         labelNome.setAttribute('style', 'color: red');
         labelNome.innerHTML= 'Nome *Insira no minimo 3 caracteres'
     } else {
