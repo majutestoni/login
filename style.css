@@ -92,6 +92,16 @@ h1 {
     right: 10px;
     cursor: pointer;
     color: rgb(35, 59, 90);
+    display: block;
+}
+
+.fa-eye-slash{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(35, 59, 90);
+    display: none;
 }
 
 .fa-eye2{

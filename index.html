@@ -13,26 +13,30 @@
 </head>
 
 <body class="body">
-    <script defer type="text/javascript" src="script.js"></script>
+
     <div class="container">
         <div class="card">
             <h1>ENTRAR</h1>
 
+            <div id="mensagemErro"></div>
+
             <div class="label-float">
                 <input type="text" id="usuario" paceholder="" required>
-                <label for="usuario">usuario</label>
+                <label id="usuarioLabel" for="usuario">usuario</label>
             </div>
 
             <div class="label-float">
 
                 <input type="password" id="senha" paceholder="" required>
-                <label for="senha">senha</label>
+                <label id="senhaLabel" for="senha">senha</label>
+
                 <i onclick="eyeClick()" id="eye" class="fa-solid fa-eye"></i>
+                <i onclick="eyeClick()" id="eyeFechado" class="fa-solid fa-eye-slash"></i>
 
             </div>
 
             <div class="justify-center">
-                <button>Entrar</button>
+                <button onclick="entrar()">Entrar</button>
             </div>
 
             <div class="justify-center">
@@ -46,7 +50,7 @@
         </div>
 
     </div>
-
+    <script defer src="js/script.js"></script>
 </body>
 
 </html>

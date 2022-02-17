@@ -77,7 +77,7 @@ function cadastrar() {
         listaUsuarios.push(
             {
                 nomeCadastrado: nome.value,
-                usuarioCadastrador: usuario.value,
+                usuarioCadastrado: usuario.value,
                 senhaCadastrada: senha.value
 
             }
@@ -88,7 +88,11 @@ function cadastrar() {
         mensagemSucesso.setAttribute('style', 'display:block');
         mensagemSucesso.innerHTML = '<strong>Cadastrando usuario...</strong>';
 
-        window.location.href = 'index.html'
+        setTimeout(() => {
+            window.location.href = 'index.html'
+        }, 2000);
+
+
     } else {
         mensagemErro.setAttribute('style', 'display:block')
         mensagemErro.innerHTML = '<strong>Faltam campos a serem preenchidos!</strong>'
