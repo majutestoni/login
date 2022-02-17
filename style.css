@@ -8,7 +8,7 @@
 }
 
 .body {
-    background-image: url(login.jpg);
+    background-image: url(imagens/login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -92,7 +92,14 @@ h1 {
     right: 10px;
     cursor: pointer;
     color: rgb(35, 59, 90);
+}
 
+.fa-eye2{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(35, 59, 90);
 }
 
 

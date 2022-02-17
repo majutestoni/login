@@ -32,9 +32,9 @@ nome.addEventListener('keyup', () => {
 })
 
 usuario.addEventListener('keyup', () => {
-    if (usuario.value.length <= 2) {
+    if (usuario.value.length <= 3) {
         labelUsuario.setAttribute('style', 'color: red');
-        labelUsuario.innerHTML = 'Usuario *Insira no minimo 3 caracteres'
+        labelUsuario.innerHTML = 'Usuario *Insira no minimo 4 caracteres'
         labelUsuario.setAttribute('style', 'border-color: red');
         validUsuario = false;
     } else {
@@ -45,9 +45,9 @@ usuario.addEventListener('keyup', () => {
 })
 
 senha.addEventListener('keyup', () => {
-    if (senha.value.length <= 2) {
+    if (senha.value.length <= 3) {
         labelSenha.setAttribute('style', 'color: red');
-        labelSenha.innerHTML = 'Senha *Insira no minimo 3 caracteres'
+        labelSenha.innerHTML = 'Senha *Insira no minimo 4 caracteres'
         labelSenha.setAttribute('style', 'border-color: red');
         validSenha = false;
     } else {
@@ -87,7 +87,8 @@ function cadastrar() {
 
         mensagemSucesso.setAttribute('style', 'display:block');
         mensagemSucesso.innerHTML = '<strong>Cadastrando usuario...</strong>';
-        window.location.href = ('index.html')
+
+        window.location.href = 'index.html'
     } else {
         mensagemErro.setAttribute('style', 'display:block')
         mensagemErro.innerHTML = '<strong>Faltam campos a serem preenchidos!</strong>'
