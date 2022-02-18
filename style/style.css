@@ -8,7 +8,7 @@
 }
 
 .body {
-    background-image: url(imagens/login.jpg);
+    background-image: url(login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
