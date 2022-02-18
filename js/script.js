@@ -44,6 +44,8 @@ function entrar() {
         senha: ''
     }
 
+    let valido = false
+
     listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'))
 
     listaUsuarios.forEach(item => {
@@ -55,19 +57,20 @@ function entrar() {
                 usuario: item.usuarioCadastrado,
                 senha: item.senhaCadastrada
             }
-
-            //deu certo
-            mensagemSucesso.setAttribute('style', 'display: block')
-            mensagemSucesso.innerHTML = 'Deu certo'
-
-        } else {
-            //deu errado
-            mensagemErro.setAttribute('style', 'display: block')
-            mensagemErro.innerHTML = 'Seu usuario ou senha está incorreto'
+            valido = true
         }
     });
-    console.log(usuarioValid)//confirmar se ta ok
+    if (valido == true) {
+        setTimeout(() => {
+            window.location.href = 'finalizado.html'
+        }, 1000);
+    } else {
+        mensagemErro.setAttribute('style', 'display: block')
+        mensagemErro.innerHTML = 'Deu errado'
+    }
+
 }
+
 
 
 
