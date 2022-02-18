@@ -33,6 +33,9 @@ function entrar() {
     let senhaLabel = document.getElementById('senhaLabel');
 
     let mensagemErro = document.getElementById('mensagemErro');
+    let mensagemSucesso = document.getElementById('mensagemSucesso');
+
+
     let listaUsuarios = [];
 
     let usuarioValid = {
@@ -43,16 +46,28 @@ function entrar() {
 
     listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'))
 
-    listaUsuarios.forEach((item) => {
-        if (usuario.value == item.usarioCadastrado && senha.value == item.senhaCadastrada) {
+    listaUsuarios.forEach(item => {
+
+        if (usuario.value == item.usuarioCadastrado && senha.value == item.senhaCadastrada) {
 
             usuarioValid = {
                 nome: item.nomeCadastrado,
-                usuario: item.usarioCadastrado,
+                usuario: item.usuarioCadastrado,
                 senha: item.senhaCadastrada
             }
+
+            //deu certo
+            mensagemSucesso.setAttribute('style', 'display: block')
+            mensagemSucesso.innerHTML = 'Deu certo'
+
+        } else {
+            //deu errado
+            mensagemErro.setAttribute('style', 'display: block')
+            mensagemErro.innerHTML = 'Seu usuario ou senha está incorreto'
         }
     });
-console.log(usuarioValid)
+    console.log(usuarioValid)//confirmar se ta ok
 }
+
+
 

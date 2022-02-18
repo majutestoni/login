@@ -86,6 +86,7 @@ function cadastrar() {
 
 
         mensagemSucesso.setAttribute('style', 'display:block');
+        mensagemErro.setAttribute('style', 'display:none');
         mensagemSucesso.innerHTML = '<strong>Cadastrando usuario...</strong>';
 
         setTimeout(() => {
@@ -95,6 +96,7 @@ function cadastrar() {
 
     } else {
         mensagemErro.setAttribute('style', 'display:block')
+        mensagemSucesso.setAttribute('style', 'display:none')
         mensagemErro.innerHTML = '<strong>Faltam campos a serem preenchidos!</strong>'
     }
 }
