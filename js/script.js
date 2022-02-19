@@ -1,6 +1,7 @@
 const passwordInput = document.getElementById('senha');
 const eye = document.getElementById('eye');
 const eyeFechado = document.getElementById('eyeFechado');
+let modal = document.getElementById('modal')
 
 function eyeClick() {
     let inputTypeisPassword = passwordInput.type == 'password';
@@ -35,6 +36,8 @@ function entrar() {
     let mensagemErro = document.getElementById('mensagemErro');
     let mensagemSucesso = document.getElementById('mensagemSucesso');
 
+    let entrar;
+
 
     let listaUsuarios = [];
 
@@ -61,11 +64,12 @@ function entrar() {
         }
     });
     if (valido == true) {
-        setTimeout(() => {
-            window.location.href = 'finalizado.html'
-        }, 1000);
+        entrar.addEventListener('click', () => {
+            modal.setAttribute('style', 'display: block');
+
+        })
     } else {
-        mensagemErro.setAttribute('style', 'display: block')
+        mensagemErro.setAttribute('style', 'display: block');
         mensagemErro.innerHTML = 'Deu errado'
     }
 
