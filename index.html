@@ -19,7 +19,6 @@
             <h1>ENTRAR</h1>
 
             <div id="mensagemErro"></div>
-            <div id="mensagemSucesso"></div>
 
             <div class="label-float">
                 <input type="text" id="usuario" paceholder="" required>
@@ -37,8 +36,9 @@
             </div>
 
             <div class="justify-center">
-                <button onclick="entrar()">Entrar</button>
+                <button id="entrar" onclick="entrar()">Entrar</button>
             </div>
+
 
             <div class="justify-center">
                 <hr>
@@ -47,9 +47,18 @@
             <p>Não tem uma conta?
                 <a href="cadastro.html">Cadastre-se</a>
             </p>
+            
 
         </div>
 
+    </div>
+    <div id="modal_card" tabindex="1" class="modal-card mostrar" >
+        <div id="modal" class="modal">
+            <button class="fechar">x</button>
+        <h1>PARABÉNS!</h1>
+        <h2>Login realizado com sucesso</h2>
+        <button>OK</button>
+    </div>
     </div>
     <script defer src="js/script.js"></script>
 </body>

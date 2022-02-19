@@ -1,7 +1,7 @@
 const passwordInput = document.getElementById('senha');
 const eye = document.getElementById('eye');
 const eyeFechado = document.getElementById('eyeFechado');
-let modal = document.getElementById('modal')
+
 
 function eyeClick() {
     let inputTypeisPassword = passwordInput.type == 'password';
@@ -26,6 +26,7 @@ function hidePassword() {
     passwordInput.setAttribute("type", "password");
 }
 
+
 function entrar() {
     let usuario = document.getElementById('usuario');
     let usuarioLabel = document.getElementById('usuarioLabel');
@@ -34,12 +35,10 @@ function entrar() {
     let senhaLabel = document.getElementById('senhaLabel');
 
     let mensagemErro = document.getElementById('mensagemErro');
-    let mensagemSucesso = document.getElementById('mensagemSucesso');
-
-    let entrar;
-
 
     let listaUsuarios = [];
+
+    let modal_card = document.getElementById('modal_card')
 
     let usuarioValid = {
         nome: '',
@@ -47,7 +46,7 @@ function entrar() {
         senha: ''
     }
 
-    let valido = false
+
 
     listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'))
 
@@ -60,18 +59,32 @@ function entrar() {
                 usuario: item.usuarioCadastrado,
                 senha: item.senhaCadastrada
             }
-            valido = true
+
         }
     });
-    if (valido == true) {
-        entrar.addEventListener('click', () => {
-            modal.setAttribute('style', 'display: block');
 
+
+
+
+    if (usuario.value == usuarioValid.usuario && senha.value == usuarioValid.senha && usuarioValid) {
+
+        modal_card.setAttribute('style', 'display: flex')
+        modal_card.addEventListener('click', (evento) => {
+            if (evento.target.className == 'modal_card' || evento.target.className == 'fechar') {
+                modal_card.setAttribute('style', 'display: none')
+            }
         })
+
+
     } else {
         mensagemErro.setAttribute('style', 'display: block');
-        mensagemErro.innerHTML = 'Deu errado'
+        mensagemErro.innerHTML = 'Usuario ou senha incorretos'
+        usuarioLabel.setAttribute('style', 'color: rgb(172, 7, 103)')
+        usuario.setAttribute('style', 'border-color: rgb(172, 7, 103)')
+        senha.setAttribute('style', 'border-color: rgb(172, 7, 103)')
+        senhaLabel.setAttribute('style', 'color: rgb(172, 7, 103)')
     }
+
 
 }
 

@@ -86,7 +86,7 @@ h1 {
     color: rgb(165, 63, 143);
 }
 
-.fa-eye{
+.fa-eye {
     position: absolute;
     top: 20px;
     right: 10px;
@@ -95,7 +95,7 @@ h1 {
     display: block;
 }
 
-.fa-eye-slash{
+.fa-eye-slash {
     position: absolute;
     top: 20px;
     right: 10px;
@@ -104,7 +104,7 @@ h1 {
     display: none;
 }
 
-.fa-eye2{
+.fa-eye2 {
     position: absolute;
     top: 20px;
     right: 10px;
@@ -160,7 +160,7 @@ a:hover {
     color: rgb(35, 59, 90);
 }
 
-#mensagemErro{
+#mensagemErro {
     text-align: center;
     color: rgb(252, 162, 232);
     background-color: rgb(172, 7, 103);
@@ -170,7 +170,7 @@ a:hover {
 
 }
 
-#mensagemSucesso{
+#mensagemSucesso {
     text-align: center;
     color: rgb(62, 149, 184);
     background-color: rgb(36, 75, 182);
@@ -178,4 +178,59 @@ a:hover {
     border-radius: 4px;
     display: none;
 
+}
+
+.modal-card {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.modal {
+    background-color: #fff;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px 0px #00000070;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal{
+    animation: modal .6s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: -15px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: rgb(165, 63, 143);
+    color: #fff;
+    box-shadow: 3px 3px 1px 0px #00000070;
 }
