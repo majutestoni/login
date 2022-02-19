@@ -66,11 +66,11 @@ function entrar() {
 
 
 
-    if (usuario.value == usuarioValid.usuario && senha.value == usuarioValid.senha && usuarioValid) {
+    if (usuario.value == usuarioValid.usuario && senha.value == usuarioValid.senha) {
 
         modal_card.setAttribute('style', 'display: flex')
         modal_card.addEventListener('click', (evento) => {
-            if (evento.target.className == 'modal_card' || evento.target.className == 'fechar') {
+            if (evento.target.className == 'ok' || evento.target.className == 'fechar') {
                 modal_card.setAttribute('style', 'display: none')
             }
         })
