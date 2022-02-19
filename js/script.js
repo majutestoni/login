@@ -38,15 +38,13 @@ function entrar() {
 
     let listaUsuarios = [];
 
-    let modal_card = document.getElementById('modal_card')
+    let modal_card = document.getElementById('modal_card');
 
     let usuarioValid = {
         nome: '',
         usuario: '',
         senha: ''
     }
-
-
 
     listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'))
 
@@ -57,35 +55,31 @@ function entrar() {
             usuarioValid = {
                 nome: item.nomeCadastrado,
                 usuario: item.usuarioCadastrado,
-                senha: item.senhaCadastrada
+                senha: item.senhaCadastrada,
+
             }
 
         }
     });
 
-
-
-
     if (usuario.value == usuarioValid.usuario && senha.value == usuarioValid.senha) {
 
-        modal_card.setAttribute('style', 'display: flex')
+
+        modal_card.setAttribute('style', 'display: flex');
         modal_card.addEventListener('click', (evento) => {
             if (evento.target.className == 'ok' || evento.target.className == 'fechar') {
-                modal_card.setAttribute('style', 'display: none')
+                modal_card.setAttribute('style', 'display: none');
             }
         })
 
-
     } else {
         mensagemErro.setAttribute('style', 'display: block');
-        mensagemErro.innerHTML = 'Usuario ou senha incorretos'
-        usuarioLabel.setAttribute('style', 'color: rgb(172, 7, 103)')
-        usuario.setAttribute('style', 'border-color: rgb(172, 7, 103)')
-        senha.setAttribute('style', 'border-color: rgb(172, 7, 103)')
-        senhaLabel.setAttribute('style', 'color: rgb(172, 7, 103)')
+        mensagemErro.innerHTML = 'Usuario ou senha incorretos';
+        usuarioLabel.setAttribute('style', 'color: rgb(172, 7, 103)');
+        usuario.setAttribute('style', 'border-color: rgb(172, 7, 103)');
+        senha.setAttribute('style', 'border-color: rgb(172, 7, 103)');
+        senhaLabel.setAttribute('style', 'color: rgb(172, 7, 103)');
     }
-
-
 }
 
 
