@@ -63,8 +63,8 @@ function entrar() {
     });
 
     if (usuario.value == usuarioValid.usuario && senha.value == usuarioValid.senha) {
-
-
+        mensagemErro.setAttribute('style', 'display: none');
+       
         modal_card.setAttribute('style', 'display: flex');
         modal_card.addEventListener('click', (evento) => {
             if (evento.target.className == 'ok' || evento.target.className == 'fechar') {

@@ -91,7 +91,7 @@ function cadastrar() {
 
         setTimeout(() => {
             window.location.href = 'index.html'
-        }, 2000);
+        }, 1000);
 
 
     } else {
